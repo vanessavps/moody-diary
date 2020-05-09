@@ -1,11 +1,4 @@
-const mongoose = require('mongoose')
-
-const connectionURL = 'mongodb://127.0.0.1:27017/mood-diary'
-
-mongoose.connect(connectionURL, { 
-    useNewUrlParser: true, 
-    useCreateIndex: true
-})
+const mongoose = require('./database')
 
 const Schema = mongoose.Schema
 

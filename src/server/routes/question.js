@@ -1,9 +1,15 @@
 const express = require('express')
 const router = express.Router()
 
-const quentionController = require('../../controllers/question')
+const questionController = require('../../controllers/question')
 
 router.route('/question')
-    .post(quentionController.createQuestion)
+    .post(questionController.create)
+    .get(questionController.getAll)
+    .put(questionController.update)
+
+router.route('/question/:question_id')
+    .get(questionController.getById)
+    .delete(questionController.deleteQuestion)
 
 module.exports = router
